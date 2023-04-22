@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/registro.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Bienvenido a la pagina de Ingreso</h1>
+    </header>
+    <main>
+        <form id="frm-userInfo" action="./test.html" method="post">
+            <fieldset form="form-userInfo">
+                <legend>Por favor llena este formulario</legend>
+
+                <label id="lbl-apellido" for="apellido">Apellido:</label>
+                <input type="text" name="apellido" id="inpt-apellido" placeholder="Ingrese su apellido"
+                    maxlength="16" pattern="[a-zA-ZÁÉÍÓÚáéíóúÑñ]+[ a-zA-ZÁÉÍÓÚáéíóúÑñ]*"
+                    title="Letras mayusculas, minusculas y el signo ('), Hasta 16 caracteres">
+                <span></span>
+                <br>
+
+                <label id="lbl-nombres" for="nombres">Nombres:</label>
+                <input type="text" name="nombres" id="inpt-nombres" placeholder="Ingrese su nombre"
+                    maxlength="40" pattern="[a-zA-ZÁÉÍÓÚáéíóúÑñ]+[ a-zA-ZÁÉÍÓÚáéíóúÑñ]*"
+                    title="Letras mayusculas y minusculas y signo (') hasta 40 caracteres">
+                <span></span>
+                <br>
+
+                <label id="lbl-edad" for="edad">Edad:</label>
+                <input type="number" name="edad" id="inpt-edad" placeholder="Ingrese su edad" min="18"
+                    max="120" pattern="[18-120]" title="Solo numeros enteros, del 18 al 120">
+                <span></span>
+                <br>
+
+                <label id="lbl-user" for="user">Nombre de Usuario*:</label>
+                <input type="text" required name="user" id="inpt-user" placeholder="Ingrese su nombre de usuario"
+                    minlength="5" maxlength="25" pattern="[A-Za-z1-9]+"
+                    title="Letras sin acento y numeros, de 5 a 25 caracteres">
+                <span></span>
+                <br>
+
+                <label id="lbl-email" for="email">E-Mail*:</label>
+                <input type="email" required name="email" id="inpt-email" placeholder="Ingrese su e-mail">
+                <span></span>
+                <br>
+
+                <label id="lbl-tipoUser" for="tipoUser">Tipo de Usuario*:</label>
+                <select required name="tipoUser" id="slct-tipoUser">
+                    <option value="" selected disabled>---Seleccionar---</option>
+                    <option value="avanzado">Avanzado</option>
+                    <option value="medio">Medio</option>
+                    <option value="novato">Novato</option>
+                </select>
+                <span></span>
+                <br>
+
+                <button id="btn-Reset" type="reset">Reset</button>
+                <button id="btn-Submit" type="button" onclick="validate()">
+                    <span>Enviar</span>
+                </button>
+            </fieldset>
+        </form>
+        <progress id="pbar-progreso" value="0" max="3"></progress>
+        <hr>
+        <div id="div-emptySpace"></div>
+        <!-- Este ultimo div es una forma rapida y fea de arreglar algo, realmente deberia usar mejor el display flex o grid en la pagina -->
+    </main>
+    <footer>
+        <p>Este documento fue armado por Díaz Sebastián Alberto ☺</p>
+    </footer>
+</body>
+
+</html>

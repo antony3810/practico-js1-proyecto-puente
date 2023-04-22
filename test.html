@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style-lab1.css">
+    <script type="text/javascript" src="./js/test.js" defer></script>
+    <title>Test</title>
+</head>
+
+<body>
+    <fieldset>
+        <legend>Test de aptitud</legend>
+        <form action="" method="post">
+            <label class="label-user" for="nombre">Apellido y Nombre</label>
+            <input class="input-user" type="text" name="nombre" id="inpt-name" required placeholder="Ingresa tu nombre aqui" maxlength="50" pattern="([A-Za-zÁÉÍÓÚáéíóú'\s]+)" title="Letras mayusculas y minusculas y signo (') hasta 50 caracteres"><br>
+            <label class="label-user" for="edad">Edad</label>
+            <input class="input-user" type="number" name="edad" id="inpt-edad" required placeholder="Ingresa tu edad" min="18" max="120" pattern="([18-120])" title="Solo numeros enteros, del 18 al 120"><br>
+            <label class="label-user" for="domicilio">Domicilio</label>
+            <input class="input-user" type="text" name="domicilio" id="inpt-domicilio" required placeholder="Ingresa tu domicilio" maxlength="50" pattern="([0-9A-Za-zÁÉÍÓÚáéíóú'\s]+)" title="Letras mayusculas y minusculas y signo (') hasta 60 caracteres"><br>
+
+            <h3>Preguntas:</h3>
+            <p>¿Que ingredientes lleva un desalluno simple?</p>
+            <span class="text-gray">Respuesta de multiples opciones</span>
+            <br>
+            <input type="checkbox" name="chkbox-cafeote" id="chkbox-cafeote" value="cafeote">
+            <label for="chkbox-cafeote">Cafe o Te</label>
+            <br>
+            <input type="checkbox" name="chkbox-leche" id="chkbox-leche" value="leche">
+            <label for="chkbox-leche">Leche</label>
+            <br>
+            <input type="checkbox" name="chkbox-tostadas" id="chkbox-tostadas" value="tostadas">
+            <label for="chkbox-tostadas">Tostadas</label>
+            <br>
+            <input type="checkbox" name="chkbox-limon" id="chkbox-limon" value="limon">
+            <label for="chkbox-limon">Limon</label>
+            <br>
+            <input type="checkbox" name="chkbox-manteca" id="chkbox-manteca" value="manteca">
+            <label for="chkbox-manteca">Manteca</label>
+            <br>
+            <input type="checkbox" name="chkbox-mediaslunas" id="chkbox-mediaslunas" value="mediaslunas">
+            <label for="chkbox-mediaslunas">Medias Lunas</label>
+            <br>
+            <input type="checkbox" name="chkbox-papas" id="chkbox-papas" value="papas">
+            <label for="chkbox-papas">Papas</label>
+            <br>
+
+            <p>¿Qué es la técnica de confitar?</p>
+            <span class="text-gray">Respuesta Unica</span>
+            <br>
+            <input type="radio" name="rad-confitar" id="rad-confitar-1" value="confitar-1">
+            <label for="rad-confitar-1">Alimentos caramelizados</label>
+            <br>
+            <input type="radio" name="rad-confitar" id="rad-confitar-2" value="confitar-2">
+            <label for="rad-confitar-2">Cocinar alimentos en azúcar lentamente</label>
+            <br>
+
+            <p>¿Qué es bardar una carne?</p>
+            <span class="text-gray">Respuesta Unica</span>
+            <br>
+            <input type="radio" name="rad-bardar" id="rad-bardar-1" value="bardar-1">
+            <label for="rad-bardar-1">Envolver en tocino para que no se seque</label>
+            <br>
+            <input type="radio" name="rad-bardar" id="rad-bardar-2" value="bardar-2">
+            <label for="rad-bardar-2">Trozar antes de cocinar</label>
+            <br>
+
+            <p>¿Cómo se llama la sartén de dos asas para freír?</p>
+            <span class="text-gray">Respuesta de multiples opciones</span>
+            <br>
+            <input type="checkbox" name="chkbox-freidora" id="chkbox-freidora" value="freidora">
+            <label for="chkbox-freidora">Freidora</label>
+            <br>
+            <input type="checkbox" name="chkbox-grasera" id="chkbox-grasera" value="grasera">
+            <label for="chkbox-grasera">Grasera</label>
+            <br>
+            <input type="checkbox" name="chkbox-parisina" id="chkbox-parisina" value="parisina">
+            <label for="chkbox-parisina">Parisina</label>
+            <br>
+
+            <p>¿Cuándo el chocolate negro está a temperatura de atemperado?</p>
+            <span class="text-gray">Respuesta Unica</span>
+            <br>
+            <input type="radio" name="rad-temp" id="rad-temp-1" value="temp-1">
+            <label for="rad-temp-1">Entre 20 y 25 ºC</label>
+            <br>
+            <input type="radio" name="rad-temp" id="rad-temp-2" value="temp-2">
+            <label for="rad-temp-2">Entre 29 y 30 ºC</label>
+            <br>
+            <input type="radio" name="rad-temp" id="rad-temp-3" value="temp-3">
+            <label for="rad-temp-3">Entre 31 y 32 ºC</label>
+            <br>
+
+
+            <br>
+            <button id="btn-submit" type="button" onclick="myFunc()">Enviar</button>
+        </form>
+
+    </fieldset>
+
+    <br>
+    <hr>
+    <br>
+
+    <div id="resultados">
+        <fieldset>
+            <legend> Resultados</legend>
+            <label for="rta-pregunta1">Pregunta 1:</label><span id="spn-rta1"> </span>
+            <br>
+            <label for="rta-pregunta1">Pregunta 2:</label><span id="spn-rta2"> </span>
+            <br>
+            <label for="rta-pregunta1">Pregunta 3:</label><span id="spn-rta3"> </span>
+            <br>
+            <label for="rta-pregunta1">Pregunta 4:</label><span id="spn-rta4"> </span>
+            <br>
+            <label for="rta-pregunta1">Pregunta 5:</label><span id="spn-rta5"> </span>
+            <br>
+            <p>Puntaje total: <span id="spn-total"></span></p>
+            <p>Tu puntaje te habilita para: <span id="spn-rol"></span></p>
+            <a href="./test.html">Otro test</a>
+        </fieldset>
+    </div>
+</body>
+
+</html>

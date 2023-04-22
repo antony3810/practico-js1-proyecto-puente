@@ -1,0 +1,162 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+fieldset {
+    background-color: #eeeeee;
+}
+
+legend {
+    border-style: solid;
+    border-color: #999999;
+    border-width: 2px;
+    background-color: #ddd;
+}
+
+#frm-userInfo {
+    color: black;
+    margin-top: 15px;
+    width: 450px;
+}
+
+label {
+    display: inline-block;
+    width: 170px;
+    height: 25px;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 200px;
+    height: 20px;
+    margin-bottom: 5px;
+    border-radius: 2px;
+}
+
+input:focus:invalid:required {
+    outline: red;
+    border-color: red;
+}
+
+input:not(:placeholder-shown):valid {
+    outline: green;
+    border-color: green;
+}
+
+input:hover {
+    box-shadow: 1px 1px 5px gray;
+}
+
+input:invalid+span:after,
+input:empty+span:after,
+select:invalid+span:after {
+    position: absolute;
+    content: '✖';
+    padding-left: 5px;
+    color: red;
+}
+
+input:valid+span:after,
+select:valid+span:after {
+    position: absolute;
+    content: '✓';
+    padding-left: 5px;
+    color: green;
+}
+
+select {
+    height: 23px;
+    width: 208px;
+}
+
+select:hover {
+    box-shadow: 1px 1px 5px gray;
+}
+
+button {
+    font-weight: bold;
+    width: 80px;
+    margin-top: 5px;
+    box-shadow: 1px 2px 5px black;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button:active {
+    transform: translateY(0.5px);
+}
+
+#btn-Submit:hover,
+#btn-Submit:focus {
+    background-color: lightgreen;
+}
+
+#btn-Submit span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition-duration: 0.5s;
+}
+
+#btn-Submit span:after {
+    content: "\00bb";
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    right: -10px;
+    transition-duration: 0.3s;
+}
+
+#btn-Submit:hover span {
+    padding-right: 10px;
+    transition-duration: 0.3s;
+}
+
+#btn-Submit:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+#btn-Submit:active {
+    background-color: green;
+    transition-duration: 0.3s;
+}
+
+#btn-Reset:hover,
+#btn-Reset:focus {
+    background-color: lightpink;
+}
+
+#btn-Reset:active {
+    background-color: red;
+    transition-duration: 0.3s;
+}
+
+progress {
+    min-width: 390px;
+    margin-left: 10px;
+    margin-top: 15px;
+}
+
+#div-emptySpace {
+    /* Provicional. Para que evitar que se oculte algo detras del footer */
+    /* Se puede arreglar de una mejor forma pero lo hice apurado */
+    height: 100px;
+}
+
+footer {
+    box-sizing: border-box;
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: #f0f0f081;
+    border-color: black;
+    border-style: solid;
+    font-weight: bold;
+}
